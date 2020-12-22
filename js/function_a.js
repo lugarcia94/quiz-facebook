@@ -34,7 +34,7 @@ function charge(question, resp) {
         pergunta = "Em qual grupo você se encaixa?";
         picture.src = './img/card02.png';
         fbq('track', 'Quiz Start no Altotietê');
-        respostas = '<button class="btn btn-lg btn-block btn-outline-primary bg-primary text-white bg-primary text-white bordas"  onclick="charge(3,1);ga(\'send\', \'event\', \'Quiz\', \'Quiz - Fonte de Renda\', \'Aposentado / Pensonista / Servidor Público\');">Aposentado / Pensonista / Servidor Público</button>' + '<button class="btn btn-lg btn-block btn-outline-primary bg-primary text-white bordas"  onclick="charge(3,2);ga(\'send\', \'event\', \'Quiz\', \'Quiz - Fonte de Renda\', \'Concurseiro / Estudante universitario\');">Concurseiro / Estudante universitario</button>' + '<button class="btn btn-lg btn-block btn-outline-primary bg-primary text-white bordas"  onclick="charge(3,3);ga(\'send\', \'event\', \'Quiz\', \'Quiz - Fonte de Renda\', \'Carteira assinada / Autonomo / Empreendedor\');">Carteira assinada / Autonomo / Empreendedor</button>' + '<button class="btn btn-lg btn-block btn-outline-primary bg-primary text-white bordas"  onclick="charge(3,4);ga(\'send\', \'event\', \'Quiz\', \'Quiz - Fonte de Renda\', \'Estou Desempregado\');">Estou Desempregado</button>';
+        respostas = '<button class="btn btn-lg btn-block btn-outline-primary bg-primary text-white bg-primary text-white bordas"  onclick="charge(3,1);ga(\'send\', \'event\', \'Quiz\', \'Quiz - Fonte de Renda\', \'Aposentado / Pensionista / Servidor Público\');">Aposentado / Pensionista / Servidor Público</button>' + '<button class="btn btn-lg btn-block btn-outline-primary bg-primary text-white bordas"  onclick="charge(3,2);ga(\'send\', \'event\', \'Quiz\', \'Quiz - Fonte de Renda\', \'Concurseiro / Estudante universitario\');">Concurseiro / Estudante universitario</button>' + '<button class="btn btn-lg btn-block btn-outline-primary bg-primary text-white bordas"  onclick="charge(3,3);ga(\'send\', \'event\', \'Quiz\', \'Quiz - Fonte de Renda\', \'Carteira assinada / Autonomo / Empreendedor\');">Carteira assinada / Autonomo / Empreendedor</button>' + '<button class="btn btn-lg btn-block btn-outline-primary bg-primary text-white bordas"  onclick="charge(3,4);ga(\'send\', \'event\', \'Quiz\', \'Quiz - Fonte de Renda\', \'Estou Desempregado\');">Estou Desempregado</button>';
         questao_atual = 2;
     } else if (question == 3) {
         $('#resp_2').val(resp);
@@ -101,7 +101,7 @@ function send_info() {
     var resp3 = $('#resp_3').val();
     var user_id = getCookie('_ga');
     var q1 = ['Limite de Crédito Alto', 'Crédito imediato', 'Sem consulta ao SPC/SERASA', 'Anuidade grátis'];
-    var q2 = ['Aposentado | Pensonista | Servidor Público', 'Concurseiro | Estudante universitario', 'Carteira assinada | Autonomo | Empreendedor', 'Estou Desempregado</button>'];
+    var q2 = ['Aposentado | Pensionista | Servidor Público', 'Concurseiro | Estudante universitario', 'Carteira assinada | Autonomo | Empreendedor', 'Estou Desempregado</button>'];
     var q3 = ['Sim', 'Não'];
     q1 = q1[(resp1 - 1)];
     q2 = q2[(resp2 - 1)];
