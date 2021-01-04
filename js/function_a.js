@@ -151,16 +151,16 @@ function send_info() {
         lista = 3;
     }
     if (!$('#Check1_termos').is(":checked")) {
-        $("#Check1_termos").addClass("is-invalid");
+        // $("#Check1_termos").addClass("is-invalid");
         $('#label_check').html('Concorde com os termos e condições')
     } else if (email == '') {
         document.getElementById('icone').innerHTML = "VER MEU CARTÃO DE CRÉDITO";
         $('#show-me').hide();
-        $("#email_send").addClass("is-invalid");
+        // $("#email_send").addClass("is-invalid");
     } else if (nome == '') {
         document.getElementById('icone').innerHTML = "VER MEU CARTÃO DE CRÉDITO";
         $('#show-me').hide();
-        $("#nome_send").addClass("is-invalid");
+        // $("#nome_send").addClass("is-invalid");
     } else {
 
         var domain = email.split("@");
@@ -191,12 +191,12 @@ function send_info() {
             success: function (retorno) {
                 console.log(retorno)
 
-                if (retorno == "5") {
-                    $('#show-me').hide();
-                    $("#email_send").addClass("is-invalid");
-                    document.getElementById('icone').innerHTML = "VER MEU CARTÃO DE CRÉDITO";
-                    return;
-                }
+                // if (retorno == "5") {
+                //     $('#show-me').hide();
+                //     // $("#email_send").addClass("is-invalid");
+                //     document.getElementById('icone').innerHTML = "VER MEU CARTÃO DE CRÉDITO";
+                //     return;
+                // }
                 fbq('track', 'Botão Quiz no Alto Tietê');
                 ga('send', 'event', 'Quiz', 'QuizLead', '');
                 $.ajax({
@@ -222,7 +222,7 @@ function send_info() {
             },
             error: function (erro, er) {
                 $('#show-me').hide();
-                $("#email_send").addClass("is-invalid");
+                // $("#email_send").addClass("is-invalid");
                 document.getElementById('icone').innerHTML = "VER MEU CARTÃO DE CRÉDITO";
                 $('#ret_data').html('<p class="destaque">Erro ' + erro.status + ' - ' + erro.statusText + '</br> Tipo de erro: ' + er + '</p>');
             }
