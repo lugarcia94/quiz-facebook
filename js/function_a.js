@@ -225,6 +225,11 @@ function send_info() {
                         },
                         dataType: 'html'
                     });
+                    fbq('trackCustom', 'quizteste', {
+                        currency: 'BRL',
+                        value: 0.60,
+                        content_name: '{{Page Path}}'
+                    });
                     window.location.href = link;
                 }
 
