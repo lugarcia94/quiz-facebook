@@ -103,6 +103,9 @@ function send_info() {
     var q1 = ['limite-de-credito', 'credito-imediato', 'sem-consulta', 'anuidade-gratis'];
     var q2 = ['aposentado-pensionista', 'estudande-concurseiro', 'empregado-carteira-assinada', 'desempregado'];
     var q3 = ['negativado', ''];
+    q1 = q1[(resp1 - 1)];
+    q2 = q2[(resp2 - 1)];
+    q3 = q3[(resp3 - 1)];
     if (limitSubmit()) {
         document.getElementById('icone').innerHTML = "VER MEU CARTÃO DE CRÉDITO";
         $('#show-me').hide();
@@ -202,9 +205,12 @@ function send_info() {
 
 
                 } else {
-                    console.log('email valido')
+
                     fbq('track', 'Botão Quiz no Alto Tietê');
+
                     ga('send', 'event', 'Quiz', 'QuizLead', '');
+
+
                     $.ajax({
                         url: "active/examples.php",
                         type: 'POST',
@@ -222,11 +228,9 @@ function send_info() {
                         },
                         dataType: 'html'
                     });
-                    fbq('trackCustom', 'quizteste', {
-                        currency: 'BRL',
-                        value: 0.60,
-                        content_name: '{{Page Path}}'
-                    });
+
+
+
                     window.location.href = link;
                 }
 
